@@ -257,7 +257,7 @@ const fs_1 = __nccwpck_require__(5747);
 const core = __importStar(__nccwpck_require__(2186));
 function parse() {
     return __awaiter(this, void 0, void 0, function* () {
-        const content = yield fs_1.promises.readFile('.fvm/flutter_config.json', 'utf8');
+        const content = yield fs_1.promises.readFile('.fvm/fvm_config.json', 'utf8');
         const json = JSON.parse(content);
         const fvmVersion = json['flutterSdkVersion'];
         core.info(`Read Flutter version ${fvmVersion} from FVM configuration`);
