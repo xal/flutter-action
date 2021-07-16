@@ -2,7 +2,7 @@ import {promises as fs} from "fs";
 import * as core from "@actions/core";
 
 export async function parse() : Promise<IFlutterVersion> {
-    const content = await fs.readFile('.fvm/flutter_config.json', 'utf8');
+    const content = await fs.readFile('.fvm/fvm_config.json', 'utf8');
     const json = JSON.parse(content);
     const fvmVersion = json['flutterSdkVersion'];
     core.info(`Read Flutter version ${fvmVersion} from FVM configuration`);
